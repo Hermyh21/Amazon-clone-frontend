@@ -3,7 +3,7 @@ import "./product.css";
 import GradeIcon from "@mui/icons-material/Grade";
 import { useStateValue } from "./StateProvider";
 function Product({ id, title, image, price, rating }) {
-  const { basket, dispatch } = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
 
   //  console.log("this is the basket", basket);
   const addToBasket = () => {
@@ -30,8 +30,8 @@ function Product({ id, title, image, price, rating }) {
         <div className="product__rating">
           {Array(rating)
             .fill()
-            .map(() => (
-              <GradeIcon className="yellow" />
+            .map((rate, index) => (
+              <GradeIcon className="yellow" key={index} />
             ))}
         </div>
       </div>

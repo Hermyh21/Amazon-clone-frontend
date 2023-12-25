@@ -7,9 +7,8 @@ import { useStateValue } from "./StateProvider";
 import { auth } from "./Firebase";
 
 function Header() {
-  // const [{ basket, user }, dispatch] = useStateValue();
-  const basket = [],
-    user = undefined;
+  const [{ basket, user }, dispatch] = useStateValue();
+
   const handleAuthenticaton = () => {
     if (user) {
       auth.signOut();
