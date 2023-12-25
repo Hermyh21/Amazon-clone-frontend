@@ -1,0 +1,14 @@
+.home__image {
+  width: 100%;
+  z-index: -1;
+  margin-bottom: -150px;
+
+  -webkit-mask-image: linear-gradient(#000, transparent);
+  mask-image: linear-gradient(#000, transparent);
+}
+.home__row {
+  display: flex;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+}
