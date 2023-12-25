@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.css";
-import Product from "./Product";
+import { Product } from "../../comonents/Product/Product";
 function Home() {
   return (
     <div className="home">
@@ -86,4 +86,4 @@ function Home() {
   );
 }
 
-export default Home;
+export { Home };

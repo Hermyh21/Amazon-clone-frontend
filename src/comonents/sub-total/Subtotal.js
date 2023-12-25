@@ -1,7 +1,7 @@
 import React from "react";
 import "./subtotal.css";
 import CurrencyFormat from "react-currency-format";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../../App/StateProvider";
 
 function Subtotal() {
   const [{ basket }, dispatch] = useStateValue();
@@ -33,4 +33,4 @@ function Subtotal() {
   );
 }
 
-export default Subtotal;
+export { Subtotal };

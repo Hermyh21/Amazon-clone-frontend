@@ -1,7 +1,7 @@
 import React from "react";
 import "./product.css";
 import GradeIcon from "@mui/icons-material/Grade";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../../App/StateProvider";
 function Product({ id, title, image, price, rating }) {
   const [{ basket }, dispatch] = useStateValue();
 
@@ -42,4 +42,4 @@ function Product({ id, title, image, price, rating }) {
   );
 }
 
-export default Product;
+export { Product };
