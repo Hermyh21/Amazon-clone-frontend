@@ -1,9 +1,16 @@
 import React from "react";
 import GradeIcon from "@mui/icons-material/Grade";
 import "./checkoutProduct.css";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../../assets/lib/StateProvider";
 
-function CheckoutProducts({ id, image, title, price, rating, hideButton }) {
+export const CheckoutProducts = ({
+  id,
+  image,
+  title,
+  price,
+  rating,
+  hideButton,
+}) => {
   const [{ basket }, dispatch] = useStateValue();
   const removeFromBasket = () => {
     dispatch({
@@ -32,6 +39,4 @@ function CheckoutProducts({ id, image, title, price, rating, hideButton }) {
       </div>
     </div>
   );
-}
-
-export default CheckoutProducts;
+};

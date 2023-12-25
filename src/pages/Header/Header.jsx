@@ -3,13 +3,11 @@ import "./header.css";
 import SearchIcon from "@mui/icons-material/Search";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { Link } from "react-router-dom";
-import { useStateValue } from "./StateProvider";
-import { auth } from "./Firebase";
+// import { Auth } from "firebase/auth";
+import { useStateValue } from "../../assets/lib/StateProvider";
 
-function Header() {
-  // const [{ basket, user }, dispatch] = useStateValue();
-  const basket = [],
-    user = undefined;
+export const Header = () => {
+  const [{ basket, user }, dispatch] = useStateValue();
   const handleAuthenticaton = () => {
     if (user) {
       auth.signOut();
@@ -59,7 +57,7 @@ function Header() {
       </div>
     </div>
   );
-}
+};
 
 export default Header;
 

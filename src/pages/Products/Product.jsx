@@ -1,11 +1,11 @@
 import React from "react";
 import "./product.css";
 import GradeIcon from "@mui/icons-material/Grade";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../../assets/lib/StateProvider";
 function Product({ id, title, image, price, rating }) {
-  const { basket, dispatch } = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+  console.log(basket);
 
-  //  console.log("this is the basket", basket);
   const addToBasket = () => {
     // dispatch the item into the data layer
     dispatch({
@@ -30,8 +30,8 @@ function Product({ id, title, image, price, rating }) {
         <div className="product__rating">
           {Array(rating)
             .fill()
-            .map(() => (
-              <GradeIcon className="yellow" />
+            .map((rating, index) => (
+              <GradeIcon className="yellow" key={index} />
             ))}
         </div>
       </div>

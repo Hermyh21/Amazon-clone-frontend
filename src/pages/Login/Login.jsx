@@ -1,13 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import "./login.css";
-import { auth } from "./Firebase";
+import { auth } from "../../assets/lib/Firebase";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 
-const Login = () => {
+export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -82,5 +82,3 @@ const Login = () => {
     </div>
   );
 };
-
-export default Login;
