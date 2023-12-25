@@ -1,9 +1,9 @@
 import "./App.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useStateValue } from "./assets/lib/StateProvider";
+import { useStateValue } from "./state-context/StateProvider";
 import { useEffect } from "react";
-import { auth } from "./assets/lib/Firebase";
+import { auth } from "./lib/Firebase";
 import { Login } from "./pages/Login/Login";
 import { Checkout } from "./pages/Checkout/Checkout";
 import { Home } from "./pages/Home/Home";

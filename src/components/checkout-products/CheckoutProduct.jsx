@@ -1,7 +1,7 @@
 import React from "react";
 import GradeIcon from "@mui/icons-material/Grade";
 import "./checkoutProduct.css";
-import { useStateValue } from "../../assets/lib/StateProvider";
+import { useStateValue } from "../../state-context/StateProvider";
 
 export const CheckoutProducts = ({
   id,
