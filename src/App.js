@@ -34,6 +34,9 @@ function App() {
     // Clean up the subscription to avoid memory leaks
     return () => unsubscribe();
   }, []);
+    // Clean up the subscription to avoid memory leaks
+    return () => unsubscribe();
+  }, []);
 
   return (
     <Router>
