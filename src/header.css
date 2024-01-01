@@ -2,7 +2,7 @@
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #131921;
+  background-color: #232231;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -13,11 +13,53 @@
   margin: 0 20px;
   margin-top: 18px;
 }
+.selected-option {
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 700;
+  color: white; /* Adjust the color as needed */
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.caret-icon {
+  margin-left: 4px;
+}
+
+.options-list {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options-list.open {
+  display: block;
+}
+
+.options-list li {
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.options-list li:hover {
+  background-color: #ddd; /* Example hover background color */
+}
 .header__searchIcon {
   padding: 5px;
-  height: 22px !important;
-  background: #cd9042;
+  height: 28px !important;
+  background: #ebc8dd;
 }
+/* .header__searchicon:hover {
+  background: #e9a0cc;
+} */
 .header__search {
   display: flex;
   flex: 1;
@@ -25,11 +67,64 @@
   border-radius: 24px;
 }
 .header__searchInput {
-  height: 11px;
+  height: 18px;
   padding: 10px;
   border: none;
   width: 100%;
+  /* border-radius: 10px; */
 }
+
+.language-selector {
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.selected-language {
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 700;
+  color: #fff;
+  /* background-color: #007bff;  */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.flag-icon {
+  margin-right: 8px;
+  max-width: 20px; /* Adjust as needed */
+}
+.caret-icon {
+  margin-left: 4px;
+  font-family: "Font Awesome"; /* Add this line if you are using Font Awesome for icons */
+}
+
+.language-list {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.language-list li {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.dropdown:hover .language-list {
+  display: block;
+}
+
 .header__option {
   display: flex;
   flex-direction: column;

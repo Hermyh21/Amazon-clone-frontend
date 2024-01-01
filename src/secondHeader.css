@@ -1,0 +1,22 @@
+.secHeader {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  background-color: #2a2e3d;
+  /* position: sticky; */
+}
+.options,
+.options__all {
+  padding: 10px;
+  color: white;
+}
+.options__all {
+  display: flex;
+  align-items: center;
+}
+.header__MenuIcon {
+  margin-right: 2px;
+}
+/* .allText {
+  padding-top: 5px;
+} */

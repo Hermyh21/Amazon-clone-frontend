@@ -2,29 +2,65 @@ import React from "react";
 import "./home.css";
 import Product from "./Product";
 function Home() {
+  function truncateTitle(title, maxLength) {
+    if (title.length > maxLength) {
+      return title.substring(0, maxLength) + "...";
+    }
+    return title;
+  }
+  const truncatedTitle1 = truncateTitle(
+    "HOWE Modern Sofa Couch, 24''Extra Deep Seat Sectional Sofa for Living Room, 85 inch Oversized Sofa",
+    26 // set your desired maximum length
+  );
+  const truncatedTitle2 = truncateTitle(
+    "Christmas Wreaths Decorations for Front Door Cordless Red and White Holiday Christmas Outdoor Tree",
+    29 // set your desired maximum length
+  );
+  const truncatedTitle3 = truncateTitle(
+    "Complexion Booster For A Glowing, Soft-Focus Look, Infused With Hyaluronic Acid, Vegan & Cruelty-Free",
+    33 // set your desired maximum length
+  );
+  const truncatedTitle4 = truncateTitle(
+    "Decorative Throw Pillow Cover Blue Eyed Husky Pillow Cases Double Sided Cushion Cover for Living Room",
+    29 // set your desired maximum length
+  );
   return (
     <div className="home">
       <div className="home__container">
         <img
           className="home__image"
-          src="https://m.media-amazon.com/images/I/51AxBGnRSeL._SX1500_.jpg"
+          src="https://m.media-amazon.com/images/I/71Q+c4-cnjL._SX3000_.jpg"
           alt=""
         />
       </div>{" "}
       <div className="home__row">
         <Product
           id="12321341"
-          title="The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback"
+          title={truncatedTitle1}
           price={11.96}
-          rating={5}
-          image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg"
+          // rating={5}
+          image="https://m.media-amazon.com/images/I/91Idk5RWu1L._AC_UL320_.jpg"
+        />
+        <Product
+          id="12321341"
+          title={truncatedTitle2}
+          price={11.96}
+          // rating={5}
+          image="https://m.media-amazon.com/images/I/81rEMdz+dHL._AC_UL320_.jpg"
+        />
+        <Product
+          id="12321341"
+          title={truncatedTitle3}
+          price={11.96}
+          // rating={5}
+          image="https://m.media-amazon.com/images/I/818fyWIQwtL._AC_UL320_.jpg"
         />
         <Product
           id="49538094"
-          title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
-          price={239.0}
-          rating={4}
-          image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
+          title={truncatedTitle4}
+          price={11.96}
+          // rating={4}
+          image="https://m.media-amazon.com/images/I/81EWgtTkBkL._AC_UL320_.jpg"
         />
       </div>
       <div className="home__row">

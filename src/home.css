@@ -1,14 +1,25 @@
 .home__image {
   width: 100%;
   z-index: -1;
-  margin-bottom: -150px;
+  margin-bottom: -305px;
 
-  -webkit-mask-image: linear-gradient(#000, transparent);
-  mask-image: linear-gradient(#000, transparent);
+  /* mask-image: linear-gradient(#000, transparent); */
 }
 .home__row {
   display: flex;
   z-index: 1;
   margin-left: 5px;
   margin-right: 5px;
+  /* flex: 1; 
+  min-width: 50%; */
+}
+@media (max-width: 760px) {
+  .home__image {
+    margin-bottom: -95px;
+  }
+  .firstRow,
+  .secondRow {
+    min-width: 0; /* Reset the minimum width */
+    flex: 0 1 50%; /* Each row takes exactly 50% of the container width */
+  }
 }

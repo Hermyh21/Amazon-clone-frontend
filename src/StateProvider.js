@@ -3,7 +3,7 @@ import React, { createContext, useContext, useReducer } from "react";
 // Prepares the dataLayer
 export const StateContext = createContext({
   basket: [],
-  user: { name: "herrmy" },
+  user: { name: "hermy" },
   dispatch: (par) => {
     console.log(par);
   },

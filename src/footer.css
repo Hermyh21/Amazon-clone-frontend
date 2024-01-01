@@ -1,0 +1,22 @@
+/* footer.css */
+
+.footer {
+  background-color: #232433;
+  color: #fff;
+  padding: 20px;
+  text-align: right;
+  /* margin-top: 2px; */
+  /* height: 40px; */
+}
+
+.clone {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 1px;
+}
+
+.name {
+  font-size: 0.9em;
+  opacity: 0.8;
+  margin: 1px;
+}
